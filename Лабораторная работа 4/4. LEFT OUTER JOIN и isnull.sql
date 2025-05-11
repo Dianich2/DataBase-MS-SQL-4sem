@@ -1,0 +1,3 @@
+use UNIVER;
+select isnull(t.TEACHER_NAME, '***')[TEACHER_NAME], p.PULPIT_NAME from
+TEACHER t RIGHT OUTER JOIN PULPIT p on t.PULPIT = p.PULPIT;

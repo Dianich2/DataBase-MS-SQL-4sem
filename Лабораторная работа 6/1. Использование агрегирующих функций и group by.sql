@@ -1,0 +1,9 @@
+use UNIVER;
+select a.AUDITORIUM_TYPE, au.AUDITORIUM_TYPENAME,
+max(a.AUDITORIUM_CAPACITY)[maxCapacity], 
+min(a.AUDITORIUM_CAPACITY)[minCapacity],
+avg(a.AUDITORIUM_CAPACITY)[averageCapacity],
+sum(a.AUDITORIUM_CAPACITY)[sumCapacity],
+count(a.AUDITORIUM_CAPACITY)[countOfAuditorium]
+from AUDITORIUM a inner join AUDITORIUM_TYPE au on a.AUDITORIUM_TYPE = au.AUDITORIUM_TYPE
+group by a.AUDITORIUM_TYPE, au.AUDITORIUM_TYPENAME;

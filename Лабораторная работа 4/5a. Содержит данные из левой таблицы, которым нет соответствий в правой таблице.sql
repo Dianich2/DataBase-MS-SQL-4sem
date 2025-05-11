@@ -1,0 +1,4 @@
+use UNIVER;
+select p.FACULTY, p.PULPIT, p.PULPIT_NAME from
+PULPIT p FULL OUTER JOIN TEACHER t on p.PULPIT = t.PULPIT
+where t.TEACHER is null;
